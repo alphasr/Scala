@@ -4,6 +4,11 @@ import java.io._
 import scala.io._
 
 object server extends App {
+val http = "HTTP/1.1 200 OK\n"
+val content = "Content-Type: text/html\n"+"Content-Length: "
+
+  //send.println("HTTP/1.1 200 OK\nContent-Type: text/html\nContent-Length: 50\n\n<html><body><h1> YARRAMI YE ! </h1></body></html>")
+
   class request(socket: ServerSocket) {
     def create():Unit={
       while(true){
@@ -20,7 +25,7 @@ object server extends App {
       val input = Source.fromFile("src/err/404.html")
       val ss = input.getLines().mkString
       println(ss)
-      return ss
+       ss
     }
 
     def err_500() = ??? /// TODO AZIMJON
@@ -29,10 +34,15 @@ object server extends App {
 
     def sendhtml(filename:String):String={
 
+      val location = "./src/static" + filename
+      println(location)
      try {
-       val input = Source.fromFile(filename)
+       val input = Source.fromFile(location)
        val ss = input.getLines().mkString
-       return ss
+       var re=""
+       //send.println("HTTP/1.1 200 OK\nContent-Type: text/html\nContent-Length: 50\n\n<html><body><h1> YARRAMI YE ! </h1></body></html>")
+       re += http + content +  ss.length + "\n\n" + ss
+       re
      }
 
       catch {
@@ -47,7 +57,6 @@ object server extends App {
     def serve(socket: Socket): Unit = {
       val reader = new BufferedReader(new InputStreamReader(socket.getInputStream))
       val getreq = reader.readLine()
-      println(getreq)
       val s = getreq.split(" ")
       val send = new PrintWriter( new BufferedWriter( new OutputStreamWriter( socket.getOutputStream ) ) )
       if(s(0) == "GET"){
