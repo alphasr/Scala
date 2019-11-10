@@ -23,17 +23,37 @@ object server extends App {
       return ss
     }
 
-    def err_500() = ??? /// TODO AZIMJON
+    def err_500(): String = {
+      val input = Source.fromFile("src/err/500.html")
+      val aa = input.getLines().mkString
+      println(aa)
+      aa
+    }
+
+    def err_403(): String = {
+      val input = Source.fromFile("src/err/403.html")
+      val bb = input.getLines().mkString
+      println(bb)
+      bb
+    }
+
+    def err_405(): String = {
+      val input = Source.fromFile("src/err/405.html")
+      val cc = input.getLines().mkString
+      println(cc)
+      cc
+    }
 
     //ERROR FUNCTIONS
 
     def sendhtml(filename:String):String={
 
-     try {
-       val input = Source.fromFile(filename)
-       val ss = input.getLines().mkString
-       return ss
-     }
+      try {
+        val input = Source.fromFile(filename)
+        val ss = input.getLines().mkString
+        println(ss)
+        ss
+      }
 
       catch {
         case e: FileNotFoundException => error_404()
@@ -52,9 +72,9 @@ object server extends App {
       val send = new PrintWriter( new BufferedWriter( new OutputStreamWriter( socket.getOutputStream ) ) )
       if(s(0) == "GET"){
         val a = s(1).split('.')
-          val suffix = a(1)
+        val suffix = a(1)
         suffix match{
-          case "html" => send.println(sendhtml(s(1)))
+          case "html" => sendhtml(s(1))
         }
       }
       //send.println("HTTP/1.1 200 OK\nContent-Type: text/html\nContent-Length: 50\n\n<html><body><h1> YARRAMI YE ! </h1></body></html>")
