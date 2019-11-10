@@ -1,0 +1,17 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /mnt/c/users/hp/IdeaProjects/fuckingserver/target/scala-2.13/fuckingserver_2.13-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /mnt/c/users/hp/IdeaProjects/fuckingserver/target/scala-2.13/classes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /mnt/c/users/hp/IdeaProjects/fuckingserver/target/scala-2.13/classes/main[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/server$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /mnt/c/users/hp/IdeaProjects/fuckingserver/target/scala-2.13/classes/main/server$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/server$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /mnt/c/users/hp/IdeaProjects/fuckingserver/target/scala-2.13/classes/main/server$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/server$request$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /mnt/c/users/hp/IdeaProjects/fuckingserver/target/scala-2.13/classes/main/server$request$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/server$request.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /mnt/c/users/hp/IdeaProjects/fuckingserver/target/scala-2.13/classes/main/server$request.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	main/server.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /mnt/c/users/hp/IdeaProjects/fuckingserver/target/scala-2.13/classes/main/server.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

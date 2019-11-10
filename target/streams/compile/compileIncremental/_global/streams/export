@@ -1,0 +1,1 @@
+scalac -bootclasspath /home/eroguege/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.1/scala-library-2.13.1.jar -classpath /mnt/c/users/hp/IdeaProjects/fuckingserver/target/scala-2.13/classes /mnt/c/users/hp/IdeaProjects/fuckingserver/src/main/scala/server.scala
