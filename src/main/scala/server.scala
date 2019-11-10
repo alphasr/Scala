@@ -22,10 +22,11 @@ val content = "Content-Type: text/html\n"+"Content-Length: "
 
     //ERROR FUNCTIONS
     def error_404():String= {
-      val input = Source.fromFile("src/err/404.html")
+      val input = Source.fromFile("./src/err/404.html")
       val ss = input.getLines().mkString
-      println(ss)
-       ss
+      var re =""
+      re+="HTTP/1.1 404 Not Found\n"+content + ss.length + "\n\n" +ss
+      re
     }
 
     def err_500() = ??? /// TODO AZIMJON
@@ -35,7 +36,6 @@ val content = "Content-Type: text/html\n"+"Content-Length: "
     def sendhtml(filename:String):String={
 
       val location = "./src/static" + filename
-      println(location)
      try {
        val input = Source.fromFile(location)
        val ss = input.getLines().mkString
